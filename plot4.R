@@ -7,11 +7,10 @@ png(filename = "plot4.png", width = 480, height = 480)
 
 par("mfrow" = c(2, 2))
 
-hist(fd$Global_active_power,
-     main = "",
-     col = "red",
+plot(fd$DateTime, fd$Global_active_power,
+     type = "l",
      xlab = "",
-     ylim = c(0, 1200)
+     ylab = "Global Active Power (kilowatts)"
 )
 
 plot(fd$DateTime, fd$Voltage,
